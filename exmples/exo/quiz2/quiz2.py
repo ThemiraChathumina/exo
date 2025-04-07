@@ -23,7 +23,7 @@ def stage_exprs(p, num_vectors, assign):
     return p, num_vectors
 
 
-def wrong_schedule(p):
+def correct_schedule(p):
     p = rename(p, "scaled_add_scheduled")
     num_vectors = 0
 
@@ -43,5 +43,5 @@ def wrong_schedule(p):
     return p
 
 
-w = wrong_schedule(scaled_add)
+w = correct_schedule(scaled_add)
 print(w)
